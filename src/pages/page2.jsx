@@ -4,15 +4,16 @@ import { Link } from 'react-router-dom';
 
 
 
-export default function page2() {
+export default function page2({name1,gender1,country1}) {
     let [color , setColor] = useState("");
     let [size , setSize] = useState();
+    console.log(name1,gender1,country1);
 
 
 
-    let name= localStorage.getItem("name").toUpperCase();
-     let gender= localStorage.getItem("gender").toUpperCase();
-    let country= localStorage.getItem("country").toUpperCase();
+    // let name= localStorage.getItem("name").toUpperCase();
+    //  let gender= localStorage.getItem("gender").toUpperCase();
+    // let country= localStorage.getItem("country").toUpperCase();
     
     
 
@@ -38,9 +39,9 @@ export default function page2() {
 
 
     <form  className="bg-white p-6 mx-56 my-5 rounded shadow-md w-full max-w-lg" style={{ backgroundColor: color }}>
-        <h1 style={{ fontSize: `${size}px` }}>{name}</h1>
-        <p style={{ fontSize: `${size}px` }}>{gender}</p>
-        <p style={{ fontSize: `${size}px` }}>{country}</p>
+        <h1 style={{ fontSize: `${size}px` }}>{name1}</h1>
+        <p style={{ fontSize: `${size}px` }}>{gender1}</p>
+        <p style={{ fontSize: `${size}px` }}>{country1}</p>
         <button
             type="submit"
             className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
